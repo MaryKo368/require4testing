@@ -5,7 +5,7 @@ Die Anwendung ermöglicht das Erfassen von Anforderungen (Requirements), das Anl
 
 ---
 
-## 🚀 Technologien
+## Technologien
 
 Die Anwendung basiert auf:
 
@@ -18,7 +18,7 @@ Die Anwendung basiert auf:
 
 ---
 
-## 📌 Funktionale Anforderungen (Umsetzung der MUST/SHOULD)
+## Funktionale Anforderungen (Umsetzung der MUST/SHOULD)
 
 ### ✔ MUST 1 – Requirements erstellen  
 Requirements Engineer möchte zu testende Anforderungen erstellen können.
@@ -40,7 +40,7 @@ Tester:in möchte zugeordnete Testfälle mit einem Ergebnis versehen können.
 
 ---
 
-## 📦 Installation & Start
+## Installation & Start
 
 ### 1️⃣ Projekt klonen
 ```bash
