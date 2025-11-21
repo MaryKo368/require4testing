@@ -3,7 +3,7 @@
 Dieses Projekt wurde im Rahmen der Fallstudie im Modul **IPWA02-01 – Programmierung von industriellen Informationssysteme mit Java EE** erstellt.  
 Die Anwendung ermöglicht das Erfassen von Anforderungen (Requirements), das Anlegen von Testfällen, Testläufen sowie die Durchführung und Auswertung von Testausführungen.
 
----
+
 
 ## Technologien
 
@@ -16,7 +16,7 @@ Die Anwendung basiert auf:
 - **H2 In-Memory-Datenbank**
 - **Maven**
 
----
+
 
 ## Funktionale Anforderungen (Umsetzung der MUST/SHOULD)
 
@@ -38,11 +38,11 @@ Tester:in möchte zugeordnete Testfälle mit einem Ergebnis versehen können.
 
 **Alle Anforderungen wurden vollständig erfüllt.**
 
----
+
 
 ## Installation & Start
 
-### 1️⃣ Projekt klonen
-```bash
+### Projekt klonen
+
 git clone https://github.com/MaryKo368/require4testing.git
 cd require4testing
