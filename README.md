@@ -1,6 +1,6 @@
 # Require4Testing – Fallstudie (IPWA02-01)
 
-Dieses Projekt wurde im Rahmen der Fallstudie im Modul **IPWA02-01 – Architektur moderner Web-Anwendungen** erstellt.  
+Dieses Projekt wurde im Rahmen der Fallstudie im Modul **IPWA02-01 – Programmierung von industriellen Informationssysteme mit Java EE** erstellt.  
 Die Anwendung ermöglicht das Erfassen von Anforderungen (Requirements), das Anlegen von Testfällen, Testläufen sowie die Durchführung und Auswertung von Testausführungen.
 
 ---
@@ -21,19 +21,20 @@ Die Anwendung basiert auf:
 ## 📌 Funktionale Anforderungen (Umsetzung der MUST/SHOULD)
 
 ### ✔ MUST 1 – Requirements erstellen  
-Benutzer:innen können Anforderungen erstellen und anzeigen.
+Requirements Engineer möchte zu testende Anforderungen erstellen können.
 
 ### ✔ MUST 2 – Testläufe anlegen  
-Testmanager:innen können neue Testläufe anlegen.
+Testmanager:in möchte Testläufe anlegen können.
 
 ### ✔ MUST 3 – Testfälle zu Requirements erstellen  
-Zu jeder Anforderung können Testfälle erfasst werden.
+Testfallersteller:in möchte zu einer Anforderung Testfälle erstellen können.
 
 ### ✔ SHOULD 4 – Testfall einem Testlauf + Tester zuweisen  
-Ein Testmanager kann Testfälle einzelnen Testläufen und Testern zuordnen.
+Testmanager:in möchte einem Testlauf verschiedene Testfälle und eine:n Tester:in
+zuordnen können.
 
 ### ✔ SHOULD 5 – Testergebnis erfassen  
-Tester:innen können den Status eines ihnen zugewiesenen Testfalls ändern (OPEN, PASSED, FAILED, BLOCKED).
+Tester:in möchte zugeordnete Testfälle mit einem Ergebnis versehen können.
 
 **Alle Anforderungen wurden vollständig erfüllt.**
 
