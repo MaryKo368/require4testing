@@ -1,0 +1,47 @@
+# Require4Testing – Fallstudie (IPWA02)
+
+Dieses Projekt wurde im Rahmen der Fallstudie im Modul **IPWA02 – Architektur moderner Web-Anwendungen** erstellt.  
+Die Anwendung ermöglicht das Erfassen von Anforderungen (Requirements), das Anlegen von Testfällen, Testläufen sowie die Durchführung und Auswertung von Testausführungen.
+
+---
+
+## 🚀 Technologien
+
+Die Anwendung basiert auf:
+
+- **Java 17**
+- **Spring Boot 3**
+- **Thymeleaf** (Frontend)
+- **Spring Data JPA**
+- **H2 In-Memory-Datenbank**
+- **Maven**
+
+---
+
+## 📌 Funktionale Anforderungen (Umsetzung der MUST/SHOULD)
+
+### ✔ MUST 1 – Requirements erstellen  
+Benutzer:innen können Anforderungen erstellen und anzeigen.
+
+### ✔ MUST 2 – Testläufe anlegen  
+Testmanager:innen können neue Testläufe anlegen.
+
+### ✔ MUST 3 – Testfälle zu Requirements erstellen  
+Zu jeder Anforderung können Testfälle erfasst werden.
+
+### ✔ SHOULD 4 – Testfall einem Testlauf + Tester zuweisen  
+Ein Testmanager kann Testfälle einzelnen Testläufen und Testern zuordnen.
+
+### ✔ SHOULD 5 – Testergebnis erfassen  
+Tester:innen können den Status eines ihnen zugewiesenen Testfalls ändern (OPEN, PASSED, FAILED, BLOCKED).
+
+**Alle Anforderungen wurden vollständig erfüllt.**
+
+---
+
+## 📦 Installation & Start
+
+### 1️⃣ Projekt klonen
+```bash
+git clone https://github.com/MaryKo368/require4testing.git
+cd require4testing
