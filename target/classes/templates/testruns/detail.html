@@ -1,0 +1,38 @@
+<h1 th:text="${testrun.name}"></h1>
+
+<h2>Zugeordnete Ausführungen</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Testfall</th>
+        <th>Tester</th>
+        <th>Status</th>
+        <th>Bearbeiten</th>
+    </tr>
+
+    <tr th:each="ex : ${testrun.executions}">
+        <td th:text="${ex.id}"></td>
+        <td th:text="${ex.testCase.expectedResult}"></td>
+        <td th:text="${ex.tester}"></td>
+        <td th:text="${ex.status}"></td>
+        <td>
+            <a th:href="@{/executions/{id}(id=${ex.id})}">Ergebnis setzen</a>
+        </td>
+    </tr>
+</table>
+
+<h2>Testfall zuweisen</h2>
+<form th:action="@{/testruns/{id}/assign(id=${testrun.id})}" method="post">
+    <label>Testfall:</label>
+    <select name="testCaseId">
+        <option th:each="tc : ${testcases}"
+                th:value="${tc.id}"
+                th:text="${tc.expectedResult}">
+        </option>
+    </select>
+
+    <label>Tester:</label>
+    <input name="tester"/>
+
+    <button type="submit">Zuweisen</button>
+</form>

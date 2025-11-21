@@ -1,0 +1,17 @@
+<h1>Testläufe</h1>
+
+<a href="/testruns/new">➕ Neuer Testlauf</a>
+
+<table>
+    <tr>
+        <th>ID</th><th>Name</th><th>Datum</th><th>Details</th>
+    </tr>
+    <tbody>
+    <tr th:each="tr : ${testruns}">
+        <td th:text="${tr.id}"></td>
+        <td th:text="${tr.name}"></td>
+        <td th:text="${tr.executionDate}"></td>
+        <td><a th:href="@{/testruns/{id}(id=${tr.id})}">Ansehen</a></td>
+    </tr>
+    </tbody>
+</table>
