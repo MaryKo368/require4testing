@@ -3,8 +3,6 @@
 Dieses Projekt wurde im Rahmen der Fallstudie im Modul **IPWA02-01 – Programmierung von industriellen Informationssysteme mit Java EE** erstellt.  
 Die Anwendung ermöglicht das Erfassen von Anforderungen (Requirements), das Anlegen von Testfällen, Testläufen sowie die Durchführung und Auswertung von Testausführungen.
 
-
-
 ## Technologien
 
 Die Anwendung basiert auf:
@@ -15,8 +13,6 @@ Die Anwendung basiert auf:
 - **Spring Data JPA**
 - **H2 In-Memory-Datenbank**
 - **Maven**
-
-
 
 ## Funktionale Anforderungen (Umsetzung der MUST/SHOULD)
 
@@ -37,8 +33,6 @@ zuordnen können.
 Tester:in möchte zugeordnete Testfälle mit einem Ergebnis versehen können.
 
 **Alle Anforderungen wurden vollständig erfüllt.**
-
-
 
 ## Installation & Start
 
