@@ -1,6 +1,6 @@
-# Require4Testing – Fallstudie (IPWA02)
+# Require4Testing – Fallstudie (IPWA02-01)
 
-Dieses Projekt wurde im Rahmen der Fallstudie im Modul **IPWA02 – Architektur moderner Web-Anwendungen** erstellt.  
+Dieses Projekt wurde im Rahmen der Fallstudie im Modul **IPWA02-01 – Architektur moderner Web-Anwendungen** erstellt.  
 Die Anwendung ermöglicht das Erfassen von Anforderungen (Requirements), das Anlegen von Testfällen, Testläufen sowie die Durchführung und Auswertung von Testausführungen.
 
 ---
