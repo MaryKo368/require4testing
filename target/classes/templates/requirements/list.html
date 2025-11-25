@@ -1,0 +1,12 @@
+<h1>Requirements</h1>
+
+<a href="/requirements/new">Neues Requirement</a>
+
+<table>
+    <tr><th>ID</th><th>Titel</th><th>Details</th></tr>
+    <tr th:each="r : ${requirements}">
+        <td th:text="${r.id}"></td>
+        <td th:text="${r.title}"></td>
+        <td><a th:href="@{/requirements/{id}(id=${r.id})}">Ansehen</a></td>
+    </tr>
+</table>

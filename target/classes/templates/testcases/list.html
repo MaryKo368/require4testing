@@ -1,0 +1,12 @@
+<h1>Testfälle</h1>
+
+<a href="/testcases/new">Neuer Testfall</a>
+
+<table>
+    <tr><th>ID</th><th>Expected Result</th><th>Requirement</th></tr>
+    <tr th:each="tc : ${testcases}">
+        <td th:text="${tc.id}"></td>
+        <td th:text="${tc.expectedResult}"></td>
+        <td th:text="${tc.requirement.title}"></td>
+    </tr>
+</table>

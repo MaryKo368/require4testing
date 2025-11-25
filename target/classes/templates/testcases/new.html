@@ -1,0 +1,15 @@
+<h1>Neuer Testfall</h1>
+
+<form th:action="@{/testcases/new}" method="post">
+    <label>Expected Result:</label>
+    <input name="expectedResult"><br>
+
+    <label>Requirement:</label>
+    <select name="requirementId">
+        <option th:each="r : ${requirements}"
+                th:value="${r.id}"
+                th:text="${r.title}"></option>
+    </select><br>
+
+    <button type="submit">Speichern</button>
+</form>

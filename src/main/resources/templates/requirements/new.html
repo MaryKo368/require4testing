@@ -1,0 +1,7 @@
+<h1>Neues Requirement</h1>
+
+<form th:action="@{/requirements/new}" method="post" th:object="${requirement}">
+    Titel: <input th:field="*{title}"><br>
+    Beschreibung: <textarea th:field="*{description}"></textarea><br>
+    <button type="submit">Speichern</button>
+</form>

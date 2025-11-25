@@ -1,48 +1,45 @@
 package com.example.require4testing.controller;
 
-import com.example.require4testing.model.Requirement;
 import com.example.require4testing.model.TestCase;
+import com.example.require4testing.model.Requirement;
+import com.example.require4testing.repository.TestCaseRepository;
 import com.example.require4testing.repository.RequirementRepository;
-import com.example.require4testing.repository.TestCaseRepository; // <-- WICHTIG
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
-@RestController
-@RequestMapping("/api/testcases")
-@CrossOrigin(origins = "*")
+@Controller
+@RequiredArgsConstructor
+@RequestMapping("/testcases")
 public class TestCaseController {
 
-    private final TestCaseRepository testCaseRepository;
-    private final RequirementRepository requirementRepository;
-
-    public TestCaseController(TestCaseRepository testCaseRepository,
-                              RequirementRepository requirementRepository) {
-        this.testCaseRepository = testCaseRepository;
-        this.requirementRepository = requirementRepository;
-    }
+    private final TestCaseRepository caseRepo;
+    private final RequirementRepository reqRepo;
 
     @GetMapping
-    public List<TestCase> getAll() {
-        return testCaseRepository.findAll();
+    public String list(Model model) {
+        model.addAttribute("testcases", caseRepo.findAll());
+        return "testcases/list";
     }
 
-    @PostMapping
-    public TestCase create(@RequestBody TestCaseRequest request) {
-        Requirement req = requirementRepository.findById(request.requirementId())
-                .orElseThrow(() -> new RuntimeException("Requirement not found"));
-
-        TestCase testCase = new TestCase(request.expectedResult(), req);
-        return testCaseRepository.save(testCase);
+    @GetMapping("/new")
+    public String newForm(Model model) {
+        model.addAttribute("testcase", new TestCase());
+        model.addAttribute("requirements", reqRepo.findAll());
+        return "testcases/new";
     }
 
-    @GetMapping("/requirement/{id}")
-    public List<TestCase> getByRequirement(@PathVariable Long id) {
-        Requirement req = requirementRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Requirement not found"));
+    @PostMapping("/new")
+    public String create(@RequestParam String expectedResult,
+                         @RequestParam Long requirementId) {
 
-        return testCaseRepository.findByRequirement(req);
+        Requirement req = reqRepo.findById(requirementId).orElse(null);
+        if (req == null) return "redirect:/testcases";
+
+        TestCase tc = new TestCase(expectedResult, req);
+        caseRepo.save(tc);
+
+        return "redirect:/testcases";
     }
-
-    public record TestCaseRequest(String expectedResult, Long requirementId) {}
 }
